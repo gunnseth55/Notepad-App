@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white"
+    android:orientation="vertical"
+    android:paddingTop="40dp"
+    tools:context=".Notes">
+
+    <TextView
+        android:id="@+id/titleid"
+        android:layout_width="414dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:capitalize="none"
+        android:text="Title"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleid"
+        app:layout_constraintVertical_bias="0.431">
+
+        <TextView
+            android:id="@+id/contentid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:capitalize="none"
+            android:text="Your Note"
+            android:textAllCaps="false"
+            android:textSize="20dp"></TextView>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/aboreto"
+        android:text="Back"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></Button>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="2dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/aboreto"
+        android:text="Update"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/titleid"
+        app:layout_constraintEnd_toEndOf="@+id/titleid" />
+</androidx.constraintlayout.widget.ConstraintLayout>

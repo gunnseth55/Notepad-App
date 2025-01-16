@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Notepad</string>
+    <string-array name="image_options">
+        <item>SELECT</item>
+        <item>From Gallery</item>
+        <item>Via Camera</item>
+    </string-array>
+</resources>
