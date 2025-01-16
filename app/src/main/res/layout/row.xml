@@ -39,6 +39,7 @@
             android:text="Content"
             android:ellipsize="end"
             android:maxLines="1"
+            android:maxHeight="30dp"
             android:scrollbars="none"
             android:lineSpacingExtra="3dp"
             android:textSize="20dp"></TextView>
