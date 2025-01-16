@@ -10,8 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.room.Room;
-import com.example.notepad.Database.MainDatabase;
 import com.example.notepad.Database.Roomdb;
 import com.example.notepad.Model.Notepad;
 import androidx.appcompat.app.AppCompatDelegate;
