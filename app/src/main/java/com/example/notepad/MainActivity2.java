@@ -106,10 +106,17 @@ public class MainActivity2 extends AppCompatActivity {
                     .setTitle("Confirm delete")
                     .setMessage("Are you sure you want to delete?")
                     .setPositiveButton("Yes",(dialog, which) -> {
-                        roomdb.maindao().delete(note);
-                        notepad.remove(note);
-                        adapter.notifyDataSetChanged();;
-                        Toast.makeText(MainActivity2.this, "Deleted", Toast.LENGTH_SHORT).show();
+                        if (note == null || roomdb == null) {
+                            Toast.makeText(MainActivity2.this, "ERROR", Toast.LENGTH_SHORT).show();
+                        }
+                        Executor executor=Executors.newSingleThreadExecutor();
+                        executor.execute(()->{
+                                    roomdb.maindao().delete(note);
+                                    runOnUiThread(()->{
+                                        adapter.notifyDataSetChanged();;
+                                        Toast.makeText(MainActivity2.this, "Deleted", Toast.LENGTH_SHORT).show();
+                                    });
+                                });
                     })
                     .setNegativeButton("No",null)
                     .show();
